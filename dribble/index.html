@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="13824.jpg" alt="Background Image">
+        </div>
+
+        <div class="contentBx">
+            <div class="formBx">
+              <div class="text-right"><p>Already a member?Sign in </p></div>
+<p><?php 
+session_start();
+    if(isset($_SESSION['signup']) && $_SESSION['signup']==true){
+         echo "<p>Signedp</p>";
+        //  exit();
+    }
+  
+    
+?></p>
+                <h2>Sign up to Dribble</h2>
+                
+                <p>Username has already been taken</p>
+                <form action="/Dribble/partials/Signup.php" method="post">
+                    <div class="inputBx">
+                      
+                        <input type="text" name="Name" placeholder="Name">    
+                    </div>
+                    <div class="inputBx">
+                        <input type="text" name="Username" placeholder="Username">    
+                    </div>
+                    <div class="inputBx">
+                        <input type="email" name="Email" placeholder="Email">    
+                    </div>
+                    <div class="inputBx">
+                        <input type="password" name="Password" placeholder="Password">    
+                    </div>
+                    <div class="remember">
+                        <label for="">
+                            <input type="checkbox" name="">Creating an account means you're okay with our Terms of Service Policy,and our default Notification Settings.
+                        </label>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Create Account" name="">    
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
